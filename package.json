@@ -1,8 +1,8 @@
 {
-  "name": "raphael",
-  "version": "2.3.0",
+  "name": "@creately/raphael-path2curve",
+  "version": "1.0.0",
   "description": "JavaScript Vector Library",
-  "main": "raphael.min.js",
+  "main": "index.js",
   "author": {
     "name": "Dmitry Baranovskiy"
   },
@@ -12,37 +12,16 @@
       "url": "https://github.com/tomasAlabes"
     }
   ],
-  "dependencies": {
-    "eve-raphael": "0.5.0"
-  },
-  "devDependencies": {
-    "qunitjs": "^1.0.0",
-    "webpack": "4.39.2",
-    "webpack-cli": "3.3.6"
-  },
   "scripts": {
-    "start": "yarn build-all",
-    "dev": "webpack -d",
-    "build-src": "webpack -d --devtool none",
-    "build-no-deps": "webpack --env.noDeps -d --devtool none --output-filename raphael.no-deps.js",
-    "build-no-deps-min": "webpack --env.noDeps -p --output-filename raphael.no-deps.min.js",
-    "build-prod": "webpack -p --output-filename raphael.min.js",
-    "build-all": "yarn build-src && yarn build-no-deps && yarn build-no-deps-min && yarn build-prod",
-    "test": "echo \"Open dev/test/index.html with your browser\" && exit 1",
-    "prepublishOnly": "yarn build-all"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/DmitryBaranovskiy/raphael.git"
+    "url": "git://github.com/creately/raphael-path2curve.git"
   },
-  "bugs": {
-    "url": "https://github.com/DmitryBaranovskiy/raphael/issues"
-  },
-  "keywords": [
-    "svg",
-    "vml",
-    "javascript"
-  ],
-  "homepage": "http://dmitrybaranovskiy.github.io/raphael/",
-  "license": "MIT"
+  "homepage": "https://github.com/creately/raphael-path2curve/",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
 }
